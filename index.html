@@ -2,11 +2,13 @@
 <html>
 
 <head>
-    <base href="https://github.com/aino-monika/privacy-policy-page.git" />
+    <base href="https://github.com/aino-monika/privacy-policy-page.git"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
 
     <style>
         @import url(https://fonts.googleapis.com/css?family=Montserrat);
@@ -412,13 +414,34 @@
 <body>
     <div class="hero-nav">
         <div class="hero-nav__inner">
-            <h1><img src="https://raw.githubusercontent.com/aino-monika/privacy-page/main/assest/Ainosoft%20Logo.png">
+            <h1><img
+                    src="https://raw.githubusercontent.com/aino-monika/privacy-policy-page/main/assest/Ainosoft%20Logo.png">
             </h1>
             <div class="hero-nav__button">
                 <a href="#" class="btn"></a>
             </div>
         </div>
     </div>
+
+    <script>
+        var heroShinker = function () {
+            var hero = $('.hero-nav'),
+                heroHeight = $('.hero-nav').outerHeight(true);
+            $(hero).parent().css('padding-top', heroHeight);
+            $(window).scroll(function () {
+                var scrollOffset = $(window).scrollTop();
+                if (scrollOffset < heroHeight) {
+                    $(hero).css('height', (heroHeight - scrollOffset));
+                }
+                if (scrollOffset > (heroHeight - 215)) {
+                    hero.addClass('fixme');
+                } else {
+                    hero.removeClass('fixme');
+                };
+            });
+        }
+        heroShinker();
+    </script>
 
     <div class="page-content">
         <h1><b>Privacy Notice</b></h1>
@@ -562,25 +585,7 @@
         </p>
     </div>
 
-    <script>
-        var heroShinker = function () {
-            var hero = $('.hero-nav'),
-                heroHeight = $('.hero-nav').outerHeight(true);
-            $(hero).parent().css('padding-top', heroHeight);
-            $(window).scroll(function () {
-                var scrollOffset = $(window).scrollTop();
-                if (scrollOffset < heroHeight) {
-                    $(hero).css('height', (heroHeight - scrollOffset));
-                }
-                if (scrollOffset > (heroHeight - 215)) {
-                    hero.addClass('fixme');
-                } else {
-                    hero.removeClass('fixme');
-                };
-            });
-        }
-        heroShinker();
-    </script>
+
 
 
     <footer>
@@ -589,7 +594,7 @@
                 <div class="logo-details">
                     <i class="fab fa-slack"></i>
                     <button class="logo_name"><a href="https://ainosoft.com/"><img
-                                src="https://raw.githubusercontent.com/aino-monika/privacy-page/main/assest/Ainosoft%20Logo.png"
+                                src="https://raw.githubusercontent.com/aino-monika/privacy-policy-page/main/assest/Ainosoft%20Logo.png"
                                 style="width: 15vw;"></a></button>
                 </div>
                 <div class="media-icons">
@@ -633,4 +638,5 @@
         </div>
     </footer>
 </body>
+
 </html>
